@@ -1,0 +1,146 @@
+:root {
+  --bg: #f6f3ec;
+  --ink: #1e2a33;
+  --ink-soft: #5b6770;
+  --accent: #c8553d;
+  --accent-soft: #f2d7c9;
+  --line: #d8d2c4;
+  --card-bg: #ffffff;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+.df-navbar {
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.df-brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+.df-brand span {
+  color: var(--accent);
+}
+
+.df-tagline {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.df-search-btn {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+.df-search-btn:hover,
+.df-search-btn:focus {
+  background-color: #ad4631;
+  border-color: #ad4631;
+  color: #fff;
+}
+
+.df-card {
+  position: relative;
+  background-color: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.df-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(30, 42, 51, 0.08);
+}
+.df-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 18px 18px 0;
+  border-color: transparent var(--accent) transparent transparent;
+}
+
+.df-card-handle {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.02em;
+}
+
+.df-card-login {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.df-empty,
+.df-error {
+  font-family: var(--font-mono);
+  color: var(--ink-soft);
+}
+
+.df-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 42, 51, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  padding: 1rem;
+}
+
+.df-modal {
+  background: var(--card-bg);
+  border-radius: 8px;
+  max-width: 480px;
+  width: 100%;
+  padding: 1.75rem;
+  position: relative;
+  border-top: 4px solid var(--accent);
+}
+
+.df-modal-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.9rem;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+.df-modal-close:hover {
+  color: var(--ink);
+}
+
+.df-stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  letter-spacing: 0.04em;
+}
+.df-stat-value {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+}
